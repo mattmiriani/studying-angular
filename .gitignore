@@ -1,0 +1,45 @@
+# Diretórios e arquivos do Node.js
+node_modules/
+package-lock.json
+
+# Diretórios de build e output
+dist/
+tmp/
+out-tsc/
+build/
+
+# Logs e relatórios
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+report.*
+*.log
+
+# Diretórios de IDEs e editores
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Configurações do Angular
+.angular/cache/
+.angular/cli.json
+.angular.json
+
+# Outros arquivos temporários
+*.bak
+*.swp
+*.tmp
+*.temp
+*.orig
+
+# Ambiente e credenciais
+.env
+.env.*
+src/environments/environment*.ts

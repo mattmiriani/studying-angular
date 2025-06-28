@@ -1,10 +1,18 @@
 {
-  "buildCommand": "npm run build",
-  "framework": "angular",
-  "installCommand": "npm install",
-  "outputDirectory": "dist/project-test",
-  "devCommand": "ng serve",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "angular.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/project-test"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }

@@ -21,7 +21,7 @@ export function getSecurityRoutes(): Routes {
 export function getConfiguredRoutes(): Routes {
   return [
     { path: 'not-found', component: NotFoundComponent },
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: '**', redirectTo: 'not-found' },
   ];
 }

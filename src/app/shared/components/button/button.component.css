@@ -1,0 +1,28 @@
+.app-generic-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.app-generic-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.app-generic-button:active {
+    transform: translateY(0);
+}
+
+.app-generic-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}

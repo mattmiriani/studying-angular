@@ -1,1 +1,21 @@
-<p>register works!</p>
+<app-auth-card title="Cadastro">
+  <form class="register-form" [formGroup]="registerForm" (ngSubmit)="onRegister()">
+    <app-input-group label="Nome" id="name" type="text" [control]="registerForm.get('name')!" />
+    <app-input-group label="Email" id="email" type="email" [control]="registerForm.get('email')!" />
+    <app-input-group label="Username" id="username" type="text" [control]="registerForm.get('username')!" />
+    <app-input-group label="Senha" id="password" type="password" [control]="registerForm.get('password')!" />
+
+    <app-input-group
+      label="Confirme sua senha"
+      id="confirmPassword"
+      type="password"
+      [control]="registerForm.get('confirmPassword')!"
+      errorMessageMismatch="As senhas devem ser iguais."
+    />
+
+    <app-button type="submit" text="Confirmar" [disabled]="registerForm.invalid"></app-button>
+    <div class="links">
+      <a href="/login">Ja tenho uma conta</a>
+    </div>
+  </form>
+</app-auth-card>

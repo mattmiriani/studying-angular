@@ -1,29 +1,26 @@
-<div class="login-container">
-  <div class="login-box">
-    <h2>Login</h2>
-    <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onLogin()">
-      <app-input-group
-        label="Usuário"
-        id="username"
-        type="text"
-        [control]="loginForm.get('username')!"
-        errorMessageRequired="Usuário é obrigatório."
-      ></app-input-group>
+<app-auth-card [title]="'Entrar'">
+  <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <app-input-group
+      label="Usuário"
+      id="username"
+      type="text"
+      [control]="loginForm.get('username')!"
+      errorMessageRequired="Usuário é obrigatório."
+    ></app-input-group>
 
-      <app-input-group
-        label="Senha"
-        id="password"
-        type="password"
-        [control]="loginForm.get('password')!"
-        errorMessageRequired="Senha é obrigatória."
-        errorMessageMinLength="A senha deve ter no mínimo 6 caracteres."
-      ></app-input-group>
+    <app-input-group
+      label="Senha"
+      id="password"
+      type="password"
+      [control]="loginForm.get('password')!"
+      errorMessageRequired="Senha é obrigatória."
+      errorMessageMinLength="A senha deve ter no mínimo 6 caracteres."
+    ></app-input-group>
 
-      <button type="submit" class="login-button" [disabled]="loginForm.invalid">Entrar</button>
-      <div class="links">
-        <a href="/retriever">Esqueci a senha</a>
-        <a href="/register">Criar conta</a>
-      </div>
-    </form>
-  </div>
-</div>
+    <app-button type="submit" text="Confirmar" [disabled]="loginForm.invalid"></app-button>
+    <div class="links">
+      <a href="/retriever">Esqueci a senha</a>
+      <a href="/register">Criar conta</a>
+    </div>
+  </form>
+</app-auth-card>

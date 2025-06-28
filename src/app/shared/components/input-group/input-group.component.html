@@ -1,6 +1,11 @@
 <div class="input-group">
-  <label [for]="id">{{ label }}:</label>
-  <input [type]="type" [id]="id" [formControl]="formControl()" />
+  <label [for]="id">{{ label }}</label>
+  <input
+    [type]="type"
+    [id]="id"
+    [formControl]="formControl()"
+    [class.is-invalid]="control.invalid && control.touched"
+  />
 
   @if (control.invalid && control.touched) {
     <div class="error-message">
@@ -12,6 +17,9 @@
       }
       @if (control.errors?.['email']) {
         <div>{{ errorMessageEmail }}</div>
+      }
+      @if (control.errors?.['mismatch']) {
+        <div>{{ errorMessageMismatch }}</div>
       }
     </div>
   }

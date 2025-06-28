@@ -13,6 +13,7 @@ export class InputGroupComponent {
   @Input() type = 'text';
   @Input() control!: AbstractControl;
 
+  @Input() errorMessageMismatch = '';
   @Input() errorMessageRequired = 'Campo obrigatório.';
   @Input() errorMessageMinLength = 'Mínimo de caracteres não atingido.';
   @Input() errorMessageEmail = 'E-mail inválido.';

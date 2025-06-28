@@ -8,9 +8,8 @@ describe('InputGroupComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [InputGroupComponent]
-    })
-    .compileComponents();
+      imports: [InputGroupComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(InputGroupComponent);
     component = fixture.componentInstance;

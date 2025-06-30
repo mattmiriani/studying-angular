@@ -19,4 +19,8 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should onLogin tem valor no username', () => {
+    expect(component.loginForm.get('username')?.value).toBeTruthy();
+  });
 });

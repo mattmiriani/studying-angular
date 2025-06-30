@@ -3,6 +3,7 @@ import { AbstractControl, FormControl, ReactiveFormsModule } from '@angular/form
 
 @Component({
   selector: 'app-input-group',
+  standalone: true,
   templateUrl: './input-group.component.html',
   styleUrls: ['./input-group.component.css'],
   imports: [ReactiveFormsModule],

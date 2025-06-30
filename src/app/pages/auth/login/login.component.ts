@@ -2,15 +2,17 @@ import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
+import { AuthCardComponent } from '../../../shared/components/auth-card/auth-card.component';
 import { ButtonComponent } from '../../../shared/components/button/button.component';
 import { InputGroupComponent } from '../../../shared/components/input-group/input-group.component';
-import { AuthCardComponent } from '../components/auth-card/auth-card.component';
+import { LinksComponent } from '../../../shared/components/links/links.component';
 
 import { createLoginForm } from './form/form-login.component';
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule, ReactiveFormsModule, InputGroupComponent, AuthCardComponent, ButtonComponent],
+  standalone: true,
+  imports: [FormsModule, ReactiveFormsModule, InputGroupComponent, AuthCardComponent, ButtonComponent, LinksComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })

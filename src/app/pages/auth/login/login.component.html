@@ -18,9 +18,11 @@
     ></app-input-group>
 
     <app-button type="submit" text="Confirmar" [disabled]="loginForm.invalid"></app-button>
-    <div class="links">
-      <a href="/retriever">Esqueci a senha</a>
-      <a href="/register">Criar conta</a>
-    </div>
+    <app-links
+      [links]="[
+        { text: 'Esqueci a senha', route: '/retriever' },
+        { text: 'Criar conta', route: '/register' },
+      ]"
+    ></app-links>
   </form>
 </app-auth-card>

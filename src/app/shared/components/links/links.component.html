@@ -1,0 +1,7 @@
+<div class="links">
+  @for (link of links; track link.route) {
+    <a [routerLink]="link.route">{{ link.text }}</a>
+  } @empty {
+    <p>Nenhum link disponível.</p>
+  }
+</div>

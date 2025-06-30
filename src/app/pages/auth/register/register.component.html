@@ -14,8 +14,6 @@
     />
 
     <app-button type="submit" text="Confirmar" [disabled]="registerForm.invalid"></app-button>
-    <div class="links">
-      <a href="/login">Ja tenho uma conta</a>
-    </div>
+    <app-links [links]="[{ text: 'Ja tenho uma conta', route: '/login' }]"></app-links>
   </form>
 </app-auth-card>

@@ -1,0 +1,22 @@
+.links {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.links a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .links {
+        font-size: 13px;
+    }
+}

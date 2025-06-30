@@ -1,15 +1,17 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
+import { AuthCardComponent } from '../../../shared/components/auth-card/auth-card.component';
 import { ButtonComponent } from '../../../shared/components/button/button.component';
 import { InputGroupComponent } from '../../../shared/components/input-group/input-group.component';
-import { AuthCardComponent } from '../components/auth-card/auth-card.component';
+import { LinksComponent } from '../../../shared/components/links/links.component';
 
 import { createRegisterForm } from './form/form-register.component';
 
 @Component({
   selector: 'app-register',
-  imports: [ReactiveFormsModule, AuthCardComponent, InputGroupComponent, ButtonComponent],
+  standalone: true,
+  imports: [ReactiveFormsModule, AuthCardComponent, InputGroupComponent, ButtonComponent, LinksComponent],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
 })

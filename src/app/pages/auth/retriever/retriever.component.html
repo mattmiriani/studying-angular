@@ -1,1 +1,21 @@
-<p>retriever works!</p>
+<app-auth-card [title]="'Recuperar senha'">
+  <form class="retriever-form" [formGroup]="retrieverForm" (ngSubmit)="onRetriever()">
+    <app-input-group
+      label="Nova senha"
+      id="newPassword"
+      type="password"
+      [control]="retrieverForm.get('password')!"
+    ></app-input-group>
+
+    <app-input-group
+      label="Confirme a nova senha"
+      id="confirmePassword"
+      type="password"
+      [control]="retrieverForm.get('confirmPassword')!"
+      errorMessageMismatch="As senhas devem ser iguais."
+    ></app-input-group>
+
+    <app-button type="submit" text="Confirmar" [disabled]="retrieverForm.invalid"></app-button>
+    <app-links [links]="[{ text: 'Lembrei minha senha', route: '/login' }]"></app-links>
+  </form>
+</app-auth-card>

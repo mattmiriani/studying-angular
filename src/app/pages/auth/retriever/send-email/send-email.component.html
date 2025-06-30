@@ -1,0 +1,13 @@
+<app-auth-card title="Qual conta voce quer recuperar ?">
+  <form class="send-email-form" [formGroup]="sendEmailForm" (ngSubmit)="onSendEmail()">
+    <app-input-group
+      label="Email ou Username"
+      id="email"
+      type="email"
+      [control]="sendEmailForm.get('email')!"
+    ></app-input-group>
+
+    <app-button type="submit" text="Enviar email"></app-button>
+    <app-links [links]="[{ text: 'Cancelar', route: '/login' }]"></app-links>
+  </form>
+</app-auth-card>

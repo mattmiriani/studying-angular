@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
+import { ConfirmCodeComponent } from './pages/auth/retriever/confirm-code/confirm-code.component';
 import { RetrieverComponent } from './pages/auth/retriever/retriever.component';
 import { SendEmailComponent } from './pages/auth/retriever/send-email/send-email.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -17,6 +18,7 @@ export function getSecurityRoutes(): Routes {
     { path: 'register', component: RegisterComponent },
     { path: 'sendEmail', component: SendEmailComponent },
     { path: 'retriever', component: RetrieverComponent },
+    { path: 'confirmCode', component: ConfirmCodeComponent },
   ];
 }
 

@@ -25,7 +25,7 @@ export class SendEmailComponent implements OnInit, OnDestroy {
   }
 
   onSendEmail(): void {
-    this._route.navigate(['/retriever']);
+    this._route.navigate(['/confirmCode']);
   }
 
   ngOnDestroy() {
